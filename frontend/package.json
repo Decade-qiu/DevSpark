@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "vitest --config ./vitest.config.ts run",
+    "test:watch": "vitest --config ./vitest.config.ts",
     "test:e2e": "playwright test",
     "dev": "next dev",
     "build": "next build",
