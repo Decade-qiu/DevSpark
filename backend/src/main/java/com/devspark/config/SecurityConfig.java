@@ -15,6 +15,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/api/sources/import-opml").permitAll()
+                .requestMatchers("/api/articles").permitAll()
                 .anyRequest().authenticated())
             .httpBasic(Customizer.withDefaults())
             .build();
