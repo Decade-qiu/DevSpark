@@ -1,6 +1,10 @@
 .worktrees/
 backend/.gradle/
 backend/build/
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/bin/
 frontend/node_modules/
 frontend/.next/
 frontend/coverage/
