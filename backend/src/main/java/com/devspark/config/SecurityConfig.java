@@ -14,6 +14,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/api/sources/import-opml").permitAll()
                 .anyRequest().authenticated())
             .httpBasic(Customizer.withDefaults())
             .build();
