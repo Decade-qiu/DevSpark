@@ -19,7 +19,7 @@ cd backend
 ./gradlew test
 ```
 
-Run the API server:
+Run the API server: 
 
 ```
 cd backend
