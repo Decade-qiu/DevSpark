@@ -12,7 +12,14 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest request) {
         UserDto user = new UserDto("user-1", request.email());
-        AuthResponse response = new AuthResponse("dev-token", user);
+        AuthResponse response = new AuthResponse("dev-token-" + System.currentTimeMillis(), user);
+        return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(@RequestBody RegisterRequest request) {
+        UserDto user = new UserDto("user-1", request.email());
+        AuthResponse response = new AuthResponse("dev-token-" + System.currentTimeMillis(), user);
         return ResponseEntity.ok(response);
     }
 }
